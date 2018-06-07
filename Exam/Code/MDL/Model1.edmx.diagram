@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a992120f4e1d46b2b322cb3a12ad5c48" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="MDL.T_AUTHORIZED_EXAM" Width="1.5" PointX="8.25" PointY="18.875" />
+        <EntityTypeShape EntityType="MDL.T_AUTHORIZED_READ_PAPERS_USER" Width="1.5" PointX="8.25" PointY="6.125" />
+        <EntityTypeShape EntityType="MDL.T_CODE_TABLE" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="MDL.T_DEGREE" Width="1.5" PointX="3.75" PointY="3.125" />
+        <EntityTypeShape EntityType="MDL.T_DEPARTMENT" Width="1.5" PointX="3.75" PointY="9.75" />
+        <EntityTypeShape EntityType="MDL.T_EXAM_PLAN" Width="1.5" PointX="6" PointY="17.25" />
+        <EntityTypeShape EntityType="MDL.T_EXAM_PLAN_ANSWER" Width="1.5" PointX="8.25" PointY="1.875" />
+        <EntityTypeShape EntityType="MDL.T_EXAM_TYPE" Width="1.5" PointX="1.5" PointY="20.5" />
+        <EntityTypeShape EntityType="MDL.T_KNOWLEDGE" Width="1.5" PointX="3.75" PointY="24" />
+        <EntityTypeShape EntityType="MDL.T_OP_REF_ROLE" Width="1.5" PointX="3" PointY="6.375" />
+        <EntityTypeShape EntityType="MDL.T_OPERATION" Width="1.5" PointX="0.75" PointY="1.875" />
+        <EntityTypeShape EntityType="MDL.T_PAPER" Width="1.5" PointX="3.75" PointY="20" />
+        <EntityTypeShape EntityType="MDL.T_PAPER_QUESTION_TYPE" Width="1.5" PointX="9" PointY="22.875" />
+        <EntityTypeShape EntityType="MDL.T_PAPERQUESTION_TYPE_QUESTION" Width="1.5" PointX="11.25" PointY="26.875" />
+        <EntityTypeShape EntityType="MDL.T_PERFORMANCE_RULES" Width="1.5" PointX="3.75" PointY="16.75" />
+        <EntityTypeShape EntityType="MDL.T_PERFORMANCE_RULES_ITEMS" Width="1.5" PointX="6" PointY="13.625" />
+        <EntityTypeShape EntityType="MDL.T_POSITION" Width="1.5" PointX="3.75" PointY="13.125" />
+        <EntityTypeShape EntityType="MDL.T_QUESTION" Width="1.5" PointX="6" PointY="25" />
+        <EntityTypeShape EntityType="MDL.T_QUESTION_TEMPLATE" Width="1.5" PointX="1.5" PointY="27.875" />
+        <EntityTypeShape EntityType="MDL.T_QUESTION_TYPE" Width="1.5" PointX="3.75" PointY="27.5" />
+        <EntityTypeShape EntityType="MDL.T_QUESTION_TYPE_RF_KNOWLEDGE" Width="1.5" PointX="11.25" PointY="24" />
+        <EntityTypeShape EntityType="MDL.T_ROLE" Width="1.5" PointX="0.75" PointY="6.125" />
+        <EntityTypeShape EntityType="MDL.T_SCORES" Width="1.5" PointX="11.25" PointY="6.125" />
+        <EntityTypeShape EntityType="MDL.T_SYS_FILE_BODY" Width="1.5" PointX="11" PointY="10.25" />
+        <EntityTypeShape EntityType="MDL.T_SYS_FILE_INFO" Width="1.5" PointX="8.75" PointY="10" />
+        <EntityTypeShape EntityType="MDL.T_USER" Width="1.5" PointX="6" PointY="4.375" />
+        <EntityTypeShape EntityType="MDL.V_AUTHOR_DEPARTMENT" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MDL.V_AUTHOR_POSITION" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MDL.V_AUTHOR_REVIWERS" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MDL.V_AUTHOR_USER" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="MDL.V_EXAM_PLAN_INFO" Width="1.5" PointX="13.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MDL.V_EXAM_QUESTION_TYPE" Width="1.5" PointX="13.75" PointY="10.75" />
+        <EntityTypeShape EntityType="MDL.V_PAPER_INFO" Width="1.5" PointX="10.75" PointY="14.75" />
+        <EntityTypeShape EntityType="MDL.V_PAPER_QUESTION_INFO" Width="1.5" PointX="12.75" PointY="14.75" />
+        <EntityTypeShape EntityType="MDL.V_PERFORMANCE_RULES_INFO" Width="1.5" PointX="14.75" PointY="14.75" />
+        <EntityTypeShape EntityType="MDL.V_QUESTION_INFO" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MDL.V_TABLE_CODE_MAKE_WAY" Width="1.5" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="MDL.V_TABLE_CODE_PAPER_TYPE" Width="1.5" PointX="15.75" PointY="6.75" />
+        <EntityTypeShape EntityType="MDL.V_USER_INFO" Width="1.5" PointX="16.75" PointY="9.75" />
+        <AssociationConnector Association="MDL.FK_T_EXAM_PLAN_REF_EXAM_USER" />
+        <AssociationConnector Association="MDL.FK_T_AUTHOR_REFERENCE_T_USER" />
+        <AssociationConnector Association="MDL.FK_T_EXAM_PLAN_REF_READ_PAPERS_USER" />
+        <AssociationConnector Association="MDL.FK_USER_REF_DEGREE" />
+        <AssociationConnector Association="MDL.FK_T_USER_REFERENCE_T_DEPART" />
+        <AssociationConnector Association="MDL.FK_T_EXAM_P_REFERENCE_T_EXAM_P" />
+        <AssociationConnector Association="MDL.FK_T_EXAM_P_REFERENCE_T_PAPER" />
+        <AssociationConnector Association="MDL.FK_T_EXAM_P_REFERENCE_T_PERFOR" />
+        <AssociationConnector Association="MDL.FK_T_SCORES_REFERENCE_T_EXAM_P" />
+        <AssociationConnector Association="MDL.FK_T_EXAM_P_REFERENCE_T_QUESTI" />
+        <AssociationConnector Association="MDL.FK_T_EXAM_P_REFERENCE_T_USER" />
+        <AssociationConnector Association="MDL.FK_EXAM_PAP_REF_EXAM_TYP" />
+        <AssociationConnector Association="MDL.FK_QUESTION_REF_KNOWLEDG" />
+        <AssociationConnector Association="MDL.FK_T_QUESTI_REFERENCE_T_KNOWLE" />
+        <AssociationConnector Association="MDL.FK_T_OP_REF_REFERENCE_T_OPERAT" />
+        <AssociationConnector Association="MDL.FK_T_OP_REF_REFERENCE_T_ROLE" />
+        <AssociationConnector Association="MDL.FK_PAPER_QU_REF_EXAM_PAP" />
+        <AssociationConnector Association="MDL.FK_PAPER_QU_REF_QUESTION" />
+        <AssociationConnector Association="MDL.FK_PAPERQUE_REF_PAPER_QU" />
+        <AssociationConnector Association="MDL.FK_T_QUESTI_REFERENCE_T_PAPER_" />
+        <AssociationConnector Association="MDL.FK_PAPERQUE_REF_QUESTION" />
+        <AssociationConnector Association="MDL.FK_T_PERFOR_REFERENCE_T_PERFOR" />
+        <AssociationConnector Association="MDL.FK_USER_REF_POSITION" />
+        <AssociationConnector Association="MDL.FK_QUESTION_REF_QUESTION" />
+        <AssociationConnector Association="MDL.FK_T_QUESTI_REFERENCE_T_QUESTI" />
+        <AssociationConnector Association="MDL.FK_USER_REF_ROLE" />
+        <AssociationConnector Association="MDL.FK_T_SCORES_REFERENCE_T_USER" />
+        <AssociationConnector Association="MDL.FK_T_SYS_FI_REFERENCE_T_SYS_FI" />
+        <EntityTypeShape EntityType="MDL.T_AppConfig" Width="1.5" PointX="3.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

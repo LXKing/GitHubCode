@@ -1,0 +1,16 @@
+时间:2015-05-20 14:51:20    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-05-20 14:56:15    标题:[网站关闭]
+     0. Function Name:ExamOnLine.Global.Application_End
+     1. Application_End
+
+时间:2015-05-20 15:01:27    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-05-20 15:04:31    标题:[网站错误]
+     0. Function Name:ExamOnLine.Global.Application_Error
+     1. Application_Error
+

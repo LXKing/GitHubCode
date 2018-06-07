@@ -1,0 +1,292 @@
+时间:2015-10-18 20:12:14    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]在线用户管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '在线用户管理','http://localhost:88/Pages/1_SystemManagement/UserOnLineManagement.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]部门管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '部门管理','http://localhost:88/Pages/2_OrganizationManagement/DepartmentManagement.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]岗位管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '岗位管理','http://localhost:88/Pages/2_OrganizationManagement/PositionManagement.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]用户管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '用户管理','http://localhost:88/Pages/2_OrganizationManagement/UserManagement.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]知识体系管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '知识体系管理','http://localhost:88/Pages/3_ExamDesign/KnowledgeManagement.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]题型管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '题型管理','http://localhost:88/Pages/3_ExamDesign/QuestionsTypeManagement.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]题库管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '题库管理','http://localhost:88/Pages/3_ExamDesign/QuestionsBankManagement.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]考试类别管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '考试类别管理','http://localhost:88/Pages/3_ExamDesign/ExamTypeManagement.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]试卷管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '试卷管理','http://localhost:88/Pages/3_ExamDesign/PapersManagement.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]考试安排]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '考试安排','http://localhost:88/Pages/4_ExaminationManagement/ExamsPlansManagement.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]练习安排]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '练习安排','http://localhost:88/', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]人工复评]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '人工复评','http://localhost:88/', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]成绩管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '成绩管理','http://localhost:88/', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]准考证管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '准考证管理','http://localhost:88/', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]我的考试]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '我的考试','http://localhost:88/Pages/5_MyExaminations/MyExams.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]断电续考]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '断电续考','http://localhost:88/', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]我的成绩]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '我的成绩','http://localhost:88/', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]我的错题]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '我的错题','http://localhost:88/', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]个人资料]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '个人资料','http://localhost:88/Pages/6_MyAccount/UserInfo.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]修改密码]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '修改密码','http://localhost:88/Pages/6_MyAccount/ModifyPwd.aspx', this);
+
+时间:2015-10-18 20:13:10    标题:[[页面:在线考试系统]http://localhost:88/Default.aspx]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:13:31    标题:[[页面:在线用户管理]http://localhost:88/Pages/1_SystemManagement/UserOnLineManagement.aspx?_dc=1445170405923]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]在线用户管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '在线用户管理','http://localhost:88/Pages/1_SystemManagement/UserOnLineManagement.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]部门管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '部门管理','http://localhost:88/Pages/2_OrganizationManagement/DepartmentManagement.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]岗位管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '岗位管理','http://localhost:88/Pages/2_OrganizationManagement/PositionManagement.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]用户管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '用户管理','http://localhost:88/Pages/2_OrganizationManagement/UserManagement.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]知识体系管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '知识体系管理','http://localhost:88/Pages/3_ExamDesign/KnowledgeManagement.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]题型管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '题型管理','http://localhost:88/Pages/3_ExamDesign/QuestionsTypeManagement.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]题库管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '题库管理','http://localhost:88/Pages/3_ExamDesign/QuestionsBankManagement.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]考试类别管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '考试类别管理','http://localhost:88/Pages/3_ExamDesign/ExamTypeManagement.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]试卷管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '试卷管理','http://localhost:88/Pages/3_ExamDesign/PapersManagement.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]考试安排]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '考试安排','http://localhost:88/Pages/4_ExaminationManagement/ExamsPlansManagement.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]练习安排]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '练习安排','http://localhost:88/', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]人工复评]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '人工复评','http://localhost:88/', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]成绩管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '成绩管理','http://localhost:88/', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]准考证管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '准考证管理','http://localhost:88/', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]我的考试]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '我的考试','http://localhost:88/Pages/5_MyExaminations/MyExams.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]断电续考]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '断电续考','http://localhost:88/', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]我的成绩]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '我的成绩','http://localhost:88/', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]我的错题]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '我的错题','http://localhost:88/', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]个人资料]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '个人资料','http://localhost:88/Pages/6_MyAccount/UserInfo.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]修改密码]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '修改密码','http://localhost:88/Pages/6_MyAccount/ModifyPwd.aspx', this);
+
+时间:2015-10-18 20:14:09    标题:[[页面:在线考试系统]http://localhost:88/Default.aspx]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:14:15    标题:[[页面:在线用户管理]http://localhost:88/Pages/1_SystemManagement/UserOnLineManagement.aspx?_dc=1445170455127]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:14:28    标题:[[页面:在线用户管理]http://localhost:88/Pages/1_SystemManagement/UserOnLineManagement.aspx?_dc=1445170405923]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:14:34    标题:[[页面:在线用户管理]http://localhost:88/Pages/1_SystemManagement/UserOnLineManagement.aspx?_dc=1445170405923]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:14:44    标题:[[页面:在线用户管理]http://localhost:88/Pages/1_SystemManagement/UserOnLineManagement.aspx?_dc=1445170405923]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:14:48    标题:[[页面:在线用户管理]http://localhost:88/Pages/1_SystemManagement/UserOnLineManagement.aspx?_dc=1445170405923]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:14:59    标题:[[页面:部门管理]http://localhost:88/Pages/2_OrganizationManagement/DepartmentManagement.aspx?_dc=1445170498621]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]在线用户管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '在线用户管理','http://localhost:88/Pages/1_SystemManagement/UserOnLineManagement.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]部门管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '部门管理','http://localhost:88/Pages/2_OrganizationManagement/DepartmentManagement.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]岗位管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '岗位管理','http://localhost:88/Pages/2_OrganizationManagement/PositionManagement.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]用户管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '用户管理','http://localhost:88/Pages/2_OrganizationManagement/UserManagement.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]知识体系管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '知识体系管理','http://localhost:88/Pages/3_ExamDesign/KnowledgeManagement.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]题型管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '题型管理','http://localhost:88/Pages/3_ExamDesign/QuestionsTypeManagement.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]题库管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '题库管理','http://localhost:88/Pages/3_ExamDesign/QuestionsBankManagement.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]考试类别管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '考试类别管理','http://localhost:88/Pages/3_ExamDesign/ExamTypeManagement.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]试卷管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '试卷管理','http://localhost:88/Pages/3_ExamDesign/PapersManagement.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]考试安排]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '考试安排','http://localhost:88/Pages/4_ExaminationManagement/ExamsPlansManagement.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]练习安排]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '练习安排','http://localhost:88/', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]人工复评]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '人工复评','http://localhost:88/', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]成绩管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '成绩管理','http://localhost:88/', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]准考证管理]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '准考证管理','http://localhost:88/', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]我的考试]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '我的考试','http://localhost:88/Pages/5_MyExaminations/MyExams.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]断电续考]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '断电续考','http://localhost:88/', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]我的成绩]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '我的成绩','http://localhost:88/', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]我的错题]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '我的错题','http://localhost:88/', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]个人资料]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '个人资料','http://localhost:88/Pages/6_MyAccount/UserInfo.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]修改密码]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+     1. addTab(#{ExampleTabs}, '修改密码','http://localhost:88/Pages/6_MyAccount/ModifyPwd.aspx', this);
+
+时间:2015-10-18 20:15:12    标题:[[页面:在线考试系统]http://localhost:88/Default.aspx]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:15:23    标题:[[页面:在线用户管理]http://localhost:88/Pages/1_SystemManagement/UserOnLineManagement.aspx?_dc=1445170523619]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:15:28    标题:[[页面:部门管理]http://localhost:88/Pages/2_OrganizationManagement/DepartmentManagement.aspx?_dc=1445170528030]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:15:38    标题:[[页面:部门管理]http://localhost:88/Pages/2_OrganizationManagement/DepartmentManagement.aspx?_dc=1445170537140]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:15:51    标题:[[页面:岗位管理]http://localhost:88/Pages/2_OrganizationManagement/PositionManagement.aspx?_dc=1445170549843]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:16:12    标题:[[页面:用户管理]http://localhost:88/Pages/2_OrganizationManagement/UserManagement.aspx?_dc=1445170566940]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+
+时间:2015-10-18 20:16:58    标题:[[页面:用户信息管理]http://localhost:88/Pages/2_OrganizationManagement/AddUser.aspx?optype=v&user_id=b8e7e008-edfb-596a-0224-d2baaf130e96&return=UserManagement.aspx]
+     0. Function Name:ExamOnLine.BasePage.WriteLog
+

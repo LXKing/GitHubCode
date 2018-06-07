@@ -1,0 +1,84 @@
+时间:2015-05-06 10:58:16    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-05-06 10:58:20    标题:[网站错误]
+     0. Function Name:ExamOnLine.Global.Application_Error
+     1. Application_Error
+
+时间:2015-05-06 10:59:39    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-05-06 11:00:17    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-05-06 11:04:13    标题:[网站错误]
+     0. Function Name:ExamOnLine.Global.Application_Error
+     1. Application_Error
+
+时间:2015-05-06 11:11:38    标题:[网站关闭]
+     0. Function Name:ExamOnLine.Global.Application_End
+     1. Application_End
+
+时间:2015-05-06 14:23:28    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-05-06 15:15:57    标题:[网站关闭]
+     0. Function Name:ExamOnLine.Global.Application_End
+     1. Application_End
+
+时间:2015-05-06 15:46:56    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-05-06 15:46:58    标题:[网站错误]
+     0. Function Name:ExamOnLine.Global.Application_Error
+     1. Application_Error
+
+时间:2015-05-06 16:07:15    标题:[网站关闭]
+     0. Function Name:ExamOnLine.Global.Application_End
+     1. Application_End
+
+时间:2015-05-06 16:43:37    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-05-06 16:44:58    标题:[网站关闭]
+     0. Function Name:ExamOnLine.Global.Application_End
+     1. Application_End
+
+时间:2015-05-06 16:47:48    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-05-06 17:00:46    标题:[网站关闭]
+     0. Function Name:ExamOnLine.Global.Application_End
+     1. Application_End
+
+时间:2015-05-06 17:16:36    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-05-06 17:22:43    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-05-06 17:25:08    标题:[根据Name查询岗位异常]
+     0. Function Name:BLL.OrganizationManagement.BLL_PositionManage.QueryPositionByName
+     1. 未将对象引用设置到对象的实例。
+
+时间:2015-05-06 17:25:09    标题:[根据Name查询岗位异常]
+     0. Function Name:BLL.OrganizationManagement.BLL_PositionManage.QueryPositionByName
+     1. 未将对象引用设置到对象的实例。
+
+时间:2015-05-06 17:46:03    标题:[网站关闭]
+     0. Function Name:ExamOnLine.Global.Application_End
+     1. Application_End
+
+时间:2015-05-06 17:46:28    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+

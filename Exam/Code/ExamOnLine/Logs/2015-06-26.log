@@ -1,0 +1,40 @@
+时间:2015-06-26 13:18:05    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-06-26 14:56:49    标题:[网站关闭]
+     0. Function Name:ExamOnLine.Global.Application_End
+     1. Application_End
+
+时间:2015-06-26 14:57:01    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-06-26 14:58:09    标题:[网站关闭]
+     0. Function Name:ExamOnLine.Global.Application_End
+     1. Application_End
+
+时间:2015-06-26 14:58:19    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-06-26 15:05:51    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-06-26 15:14:11    标题:[网站启动]
+     0. Function Name:ExamOnLine.Global.Application_Start
+     1. Application_Start
+
+时间:2015-06-26 15:18:11    标题:[根据Name查询岗位异常]
+     0. Function Name:BLL.OrganizationManagement.BLL_PositionManage.QueryPositionByName
+     1. 未将对象引用设置到对象的实例。
+
+时间:2015-06-26 15:18:35    标题:[根据Name查询岗位异常]
+     0. Function Name:BLL.OrganizationManagement.BLL_PositionManage.QueryPositionByName
+     1. 未将对象引用设置到对象的实例。
+
+时间:2015-06-26 15:19:30    标题:[修改岗位异常]
+     0. Function Name:BLL.OrganizationManagement.BLL_PositionManage.UpdatePosition
+     1. 未将对象引用设置到对象的实例。
+

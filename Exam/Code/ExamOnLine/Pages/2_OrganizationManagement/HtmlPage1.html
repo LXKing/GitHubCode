@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="txt/html;charset=utf-8" />
+    <title>javascript实现IE,firefox客户端图片预览</title>
+    <script>
+        //使用IE条件注释来判断是否IE6，通过判断userAgent不一定准确
+        if (document.all) document.write('<!--[if lte IE 6]><script type="text/javascript">window.ie6= true<\/script><![endif]-->');
+        // var ie6 = /msie 6/i.test(navigator.userAgent);//不推荐，有些系统的ie6 userAgent会是IE7或者IE8
+        function change(picId, fileId) {
+            var pic = document.getElementById(picId);
+            var file = document.getElementById(fileId);
+            if (window.FileReader) {//chrome,firefox7+,opera,IE10,IE9，IE9也可以用滤镜来实现
+                oFReader = new FileReader();
+                oFReader.readAsDataURL(file.files[0]);
+                oFReader.onload = function (oFREvent) { pic.src = oFREvent.target.result; };
+            }
+            else if (document.all) {//IE8-
+                file.select();
+                file.blur();
+                var reallocalpath = document.selection.createRange().htmlText//IE下获取实际的本地文件路径
+                if (window.ie6) pic.src = reallocalpath; //IE6浏览器设置img的src为本地路径可以直接显示图片
+                else { //非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现，IE10浏览器不支持滤镜，需要用FileReader来实现，所以注意判断FileReader先
+                    pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+                    pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';//设置img的src为base64编码的透明图片，要不会显示红xx
+                }
+            }
+            else if (file.files) {//firefox6-
+                if (file.files.item(0)) {
+                    url = file.files.item(0).getAsDataURL();
+                    pic.src = url;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="form1" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td> 草图1：</td>
+                <td>
+                    <input type="file" name="file1" id="file1" onchange="change('pic1','file1')" />
+                </td>
+            </tr>
+            <tr>
+                <td>草图浏览1：</td>
+                <td>
+                    <img src="images/px.gif" id="pic1" />
+                </td>
+            </tr>
+            <tr>
+                <td> 草图2：</td>
+                <td>
+                    <input type="file" name="file2" id="file2" onchange="change('pic2','file2')" />
+                </td>
+            </tr>
+            <tr>
+                <td>草图浏览2：</td>
+                <td>
+                    <img src="images/px.gif" id="pic2" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
