@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D94FBB9A-FBF2-4A6B-B2C4-62CBDCEFC05D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XCI</RootNamespace>
+    <AssemblyName>XCI.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\AppRelease\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoUpdater\AppUpdateFactory.cs" />
+    <Compile Include="AutoUpdater\IAppUpdate.cs" />
+    <Compile Include="AutoUpdater\XCIWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AutoUpdater\实现\DefaultAppUpdate.cs" />
+    <Compile Include="Configuration\辅助类\ComponentEntity.cs" />
+    <Compile Include="Configuration\辅助类\ComponentParamEntity.cs" />
+    <Compile Include="AutoUpdater\辅助类\AppUpdateEntity.cs" />
+    <Compile Include="Core\BaseFactory.cs" />
+    <Compile Include="Core\BoolMessage.cs" />
+    <Compile Include="Caching\实现\HttpRuntimeCache.cs" />
+    <Compile Include="Caching\CacheBase.cs" />
+    <Compile Include="Caching\辅助类\CacheItemPriority.cs" />
+    <Compile Include="Caching\CacheFactory.cs" />
+    <Compile Include="Caching\ICache.cs" />
+    <Compile Include="Core\Collections\DictionarySerializable.cs" />
+    <Compile Include="Core\Collections\XCIList.cs" />
+    <Compile Include="Configuration\实现\ByteConfigProvider.cs" />
+    <Compile Include="Configuration\辅助类\ConfigEntity.cs" />
+    <Compile Include="Configuration\ConfigProviderBase.cs" />
+    <Compile Include="Configuration\ConfigFactory.cs" />
+    <Compile Include="Configuration\IConfigProvider.cs" />
+    <Compile Include="Configuration\实现\XmlConfigProvider.cs" />
+    <Compile Include="Core\Factory.cs" />
+    <Compile Include="Core\KeyValuePair.cs" />
+    <Compile Include="Core\_SharpZip\Checksums\Adler32.cs" />
+    <Compile Include="Core\_SharpZip\Checksums\CRC32.cs" />
+    <Compile Include="Core\_SharpZip\Checksums\IChecksum.cs" />
+    <Compile Include="Core\_SharpZip\Checksums\StrangeCRC.cs" />
+    <Compile Include="Core\_SharpZip\Core\FileSystemScanner.cs" />
+    <Compile Include="Core\_SharpZip\Core\INameTransform.cs" />
+    <Compile Include="Core\_SharpZip\Core\IScanFilter.cs" />
+    <Compile Include="Core\_SharpZip\Core\NameFilter.cs" />
+    <Compile Include="Core\_SharpZip\Core\PathFilter.cs" />
+    <Compile Include="Core\_SharpZip\Core\StreamUtils.cs" />
+    <Compile Include="Core\_SharpZip\Core\WindowsPathUtils.cs" />
+    <Compile Include="Core\_SharpZip\Encryption\PkzipClassic.cs" />
+    <Compile Include="Core\_SharpZip\Encryption\ZipAESStream.cs" />
+    <Compile Include="Core\_SharpZip\Encryption\ZipAESTransform.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\Deflater.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\Inflater.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="Core\_SharpZip\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="Core\_SharpZip\Zip\FastZip.cs" />
+    <Compile Include="Core\_SharpZip\Zip\IEntryFactory.cs" />
+    <Compile Include="Core\_SharpZip\Zip\SharpZipBaseException.cs" />
+    <Compile Include="Core\_SharpZip\Zip\WindowsNameTransform.cs" />
+    <Compile Include="Core\_SharpZip\Zip\ZipConstants.cs" />
+    <Compile Include="Core\_SharpZip\Zip\ZipEntry.cs" />
+    <Compile Include="Core\_SharpZip\Zip\ZipEntryFactory.cs" />
+    <Compile Include="Core\_SharpZip\Zip\ZipException.cs" />
+    <Compile Include="Core\_SharpZip\Zip\ZipExtraData.cs" />
+    <Compile Include="Core\_SharpZip\Zip\ZipFile.cs" />
+    <Compile Include="Core\_SharpZip\Zip\ZipHelperStream.cs" />
+    <Compile Include="Core\_SharpZip\Zip\ZipInputStream.cs" />
+    <Compile Include="Core\_SharpZip\Zip\ZipNameTransform.cs" />
+    <Compile Include="Core\_SharpZip\Zip\ZipOutputStream.cs" />
+    <Compile Include="Core\ZipStorer.cs" />
+    <Compile Include="DataDictionary\DataDictionaryBase.cs" />
+    <Compile Include="DataDictionary\DataDictionaryFactory.cs" />
+    <Compile Include="DataDictionary\IDataDictionary.cs" />
+    <Compile Include="DataDictionary\实现\XmlDataDictionary.cs" />
+    <Compile Include="DataDictionary\辅助类\DataDictionaryEntity.cs" />
+    <Compile Include="Data\实现\SqliteDatabase.cs" />
+    <Compile Include="Data\DatabaseBase.cs" />
+    <Compile Include="Data\DatabaseFactory.cs" />
+    <Compile Include="Data\IDatabase.cs" />
+    <Compile Include="Data\实现\SqlServerDatabase.cs" />
+    <Compile Include="Email\实现\DefaultEmail.cs" />
+    <Compile Include="Email\EmailBase.cs" />
+    <Compile Include="Email\EmailFactory.cs" />
+    <Compile Include="Email\辅助类\EmailSetting.cs" />
+    <Compile Include="Email\IEmail.cs" />
+    <Compile Include="Encrypt\Cipher.cs" />
+    <Compile Include="Encrypt\EncryptBase.cs" />
+    <Compile Include="Encrypt\实现\frmEncryptTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Encrypt\实现\frmEncryptTest.designer.cs">
+      <DependentUpon>frmEncryptTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encrypt\实现\HashEncrypt.cs" />
+    <Compile Include="Encrypt\EncryptFactory.cs" />
+    <Compile Include="Encrypt\实现\SymEncrypt.cs" />
+    <Compile Include="Encrypt\IEncrypt.cs" />
+    <Compile Include="Entity\EntityBase.cs" />
+    <Compile Include="Entity\EntityMetadata\EntityMetadata.cs" />
+    <Compile Include="Entity\EntityMetadata\EntityMetadataFactory.cs" />
+    <Compile Include="Entity\EntityService.cs" />
+    <Compile Include="Entity\EntityMetadata\IEntityMetadata.cs" />
+    <Compile Include="Entity\EntityMetadata\实现\XmlEntityMetadata.cs" />
+    <Compile Include="Entity\IEntityService.cs" />
+    <Compile Include="Entity\VersionException.cs" />
+    <Compile Include="ExceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionForm.Designer.cs">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extension\DataTableExtensions.cs" />
+    <Compile Include="Extension\DateTimeExtensions.cs" />
+    <Compile Include="Extension\DictionaryExtensions.cs" />
+    <Compile Include="Extension\IntegerExtensions.cs" />
+    <Compile Include="Extension\ListExtension.cs" />
+    <Compile Include="Extension\ObjectExtension.cs" />
+    <Compile Include="Extension\StringExtensions.cs" />
+    <Compile Include="Core\Guard.cs" />
+    <Compile Include="Helper\AssemblyHelper.cs" />
+    <Compile Include="Helper\AttributeHelper.cs" />
+    <Compile Include="Helper\CnCanlendar_NongLi.cs" />
+    <Compile Include="Helper\CodeTimerHelper.cs" />
+    <Compile Include="Helper\ConsoleHelper.cs" />
+    <Compile Include="Helper\CookieHelper.cs" />
+    <Compile Include="Helper\DataTableHelper.cs" />
+    <Compile Include="Helper\DateTimeHelper.cs" />
+    <Compile Include="Helper\DebugHelper.cs" />
+    <Compile Include="Helper\DialogHelper.cs" />
+    <Compile Include="Helper\EnumHelper.cs" />
+    <Compile Include="Helper\ExpressionHelper.cs" />
+    <Compile Include="Helper\FactoryHelper.cs" />
+    <Compile Include="Helper\FileHelper.cs" />
+    <Compile Include="Helper\HotKeyHelper.cs" />
+    <Compile Include="Helper\IconHelper.cs" />
+    <Compile Include="Helper\ImageHelper.cs" />
+    <Compile Include="Helper\ImeHelper.cs" />
+    <Compile Include="Helper\IniFileHelper.cs" />
+    <Compile Include="Helper\ListHelper.cs" />
+    <Compile Include="Helper\MessageBoxHelper.cs" />
+    <Compile Include="Helper\NetWorkHelper.cs" />
+    <Compile Include="Helper\ObjectBuildHelper.cs" />
+    <Compile Include="Helper\ObjectHelper.cs" />
+    <Compile Include="Helper\PathHelper.cs" />
+    <Compile Include="Helper\RandomHelper.cs" />
+    <Compile Include="Helper\ReaderWriterLockHelper.cs" />
+    <Compile Include="Helper\RegisterHelper.cs" />
+    <Compile Include="Helper\ResourceImageHelper.cs" />
+    <Compile Include="Helper\RmbHelper.cs" />
+    <Compile Include="Helper\ScriptHelper.cs" />
+    <Compile Include="Helper\SpellHelper.cs" />
+    <Compile Include="Helper\SqlServerHelper.cs" />
+    <Compile Include="Helper\StartupHelper.cs" />
+    <Compile Include="Helper\StaticCacheHelper.cs" />
+    <Compile Include="Helper\StreamHelper.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="Helper\SystemPortHelper.cs" />
+    <Compile Include="Helper\TaskHelper.cs" />
+    <Compile Include="Helper\ThreadHelper.cs" />
+    <Compile Include="Helper\TryHelper.cs" />
+    <Compile Include="Helper\TypeHelper.cs" />
+    <Compile Include="Helper\ValidateHelper.cs" />
+    <Compile Include="Helper\Validator.cs" />
+    <Compile Include="Helper\WebClientHelper.cs" />
+    <Compile Include="Helper\WebHelper.cs" />
+    <Compile Include="Helper\Win32Helper.cs" />
+    <Compile Include="Helper\WMIHelper.cs" />
+    <Compile Include="Helper\XmlHelper.cs" />
+    <Compile Include="Helper\ZipHelper.cs" />
+    <Compile Include="Logging\辅助类\LogDefaultFormatter.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\辅助类\ILogFormatter.cs" />
+    <Compile Include="Logging\实现\ConsoleLog.cs" />
+    <Compile Include="Logging\辅助类\LogEntity.cs" />
+    <Compile Include="Logging\实现\FileLog.cs" />
+    <Compile Include="Logging\辅助类\LogLevel.cs" />
+    <Compile Include="Logging\LogBase.cs" />
+    <Compile Include="Logging\LogFactory.cs" />
+    <Compile Include="Core\Messages.cs" />
+    <Compile Include="Param\IParam.cs" />
+    <Compile Include="Param\IUserParam.cs" />
+    <Compile Include="Param\LocalParamFactory.cs" />
+    <Compile Include="Param\ParamBase.cs" />
+    <Compile Include="Param\ParamFactory.cs" />
+    <Compile Include="Param\UserParamBase.cs" />
+    <Compile Include="Param\UserParamFactory.cs" />
+    <Compile Include="Param\实现\XmlParam.cs" />
+    <Compile Include="Param\实现\XmlUserParam.cs" />
+    <Compile Include="Param\辅助类\ParamEntity.cs" />
+    <Compile Include="Plugin\IPlugin.cs" />
+    <Compile Include="Core\ProjectUser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\IQueryBuild.cs" />
+    <Compile Include="Query\Query.cs" />
+    <Compile Include="Query\QueryBuildBase.cs" />
+    <Compile Include="Query\QueryBuildFactory.cs" />
+    <Compile Include="Query\实现\SqliteQueryBuild.cs" />
+    <Compile Include="Query\实现\SqlServerQueryBuild.cs" />
+    <Compile Include="Query\辅助类\QueryData.cs" />
+    <Compile Include="Core\Reflection\FastMethodInfo.cs" />
+    <Compile Include="Core\Reflection\FastPropertyInfo.cs" />
+    <Compile Include="Core\Reflection\ReflectionExtensions.cs" />
+    <Compile Include="Sequence\ISequence.cs" />
+    <Compile Include="Sequence\SequenceFactory.cs" />
+    <Compile Include="Core\ServiceFactory.cs" />
+    <Compile Include="SynchronousDateTime\ISynchronousDateTime.cs" />
+    <Compile Include="SynchronousDateTime\SynchronousDateTimeWeb.cs" />
+    <Compile Include="SynchronousDateTime\SynchronousDateTimeFactory.cs" />
+    <Compile Include="XCIComponent\IManager.cs" />
+    <Compile Include="XCIComponent\IXCIComponentTest.cs" />
+    <Compile Include="XCIComponent\XCIComponentAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encrypt\实现\frmEncryptTest.resx">
+      <DependentUpon>frmEncryptTest.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\DataLogo.png" />
+    <EmbeddedResource Include="Email\EmailLogo.png" />
+    <EmbeddedResource Include="Encrypt\EncryptLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExceptionForm.resx">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logging\LoggingLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Query\QueryBuildLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XCIComponent\ComponentLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration\ConfigProviderLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Param\ParamLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AutoUpdater\AutoUpdaterLogo.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="DataDictionary\DataDictionaryLogo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

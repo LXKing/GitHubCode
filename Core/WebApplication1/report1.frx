@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/12/2017 08:47:20" ReportInfo.Modified="01/12/2017 11:32:28" ReportInfo.CreatorVersion="2013.2.5.0">
+  <Dictionary/>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text4" Left="170.1" Top="9.45" Width="396.9" Height="18.9" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35"/>
+    <DataBand Name="Data1" Top="74.15" Width="718.2" Height="226.8">
+      <TextObject Name="Text1" Left="18.9" Top="28.35" Width="94.5" Height="18.9" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text2" Left="132.3" Top="28.35" Width="94.5" Height="18.9" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text3" Left="245.7" Top="28.35" Width="94.5" Height="18.9" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <BarcodeObject Name="Barcode1" Left="519.75" Top="28.35" Width="177.5" Height="198.45"/>
+      <LineObject Name="Line1" Left="9.45" Top="9.45" Width="378" Diagonal="true"/>
+      <LineObject Name="Line2" Left="9.45" Top="9.45" Height="132.3" Diagonal="true"/>
+      <LineObject Name="Line3" Left="9.45" Top="141.75" Width="378" Diagonal="true"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="304.95" Width="718.2" Height="37.8"/>
+  </ReportPage>
+</Report>

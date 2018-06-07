@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/13/2017 15:14:44" ReportInfo.Modified="02/26/2018 10:37:32" ReportInfo.CreatorVersion="2013.2.5.0">
+  <Dictionary/>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="TextObject_Title" Width="718.2" Height="37.8" Dock="Fill" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="40.47" Width="718.2" Height="28.35">
+      <TextObject Name="TextObject_YeMei" Left="37.8" Top="9.45" Width="103.95" Height="18.9" Font="宋体, 9pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="71.48" Width="718.2" Height="935.55">
+      <PictureObject Name="Picture1" Left="66.15" Top="18.9" Width="595.35" Height="396.9" Anchor="Top, Bottom, Left, Right"/>
+      <TableObject Name="Table1" Left="151.2" Top="217.35" Width="238.14" Height="103.95">
+        <TableColumn Name="Column1" Width="119.07"/>
+        <TableColumn Name="Column2" Width="119.07"/>
+      </TableObject>
+      <LineObject Name="Line1" Left="28.35" Top="368.55" Width="453.6"/>
+      <BarcodeObject Name="Barcode1" Left="66.15" Top="396.9" Width="258.75" Height="94.5" Text="ABCD123456789"/>
+      <RichObject Name="Rich1" Left="368.55" Top="396.9" Width="274.05" Height="37.8" Text="{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}{\f1\fnil\fcharset0 Tahoma;}{\f2\fnil\fcharset2 Symbol;}}&#13;&#10;{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-60\li60\lang2052\f0\fs52\'ce\'d2\'ca\'c7\ul\b\'d6\'d0\'b9\'fa\'c8\'cb\ulnone\b0 !\lang1033\f1\fs17\par&#13;&#10;}&#13;&#10;"/>
+      <CheckBoxObject Name="CheckBox1" Left="340.2" Top="406.35" Width="18.9" Height="18.9" CheckColor="0, 192, 0"/>
+      <BarcodeObject Name="Barcode2" Left="66.15" Top="510.3" Width="258.75" Height="94.5" Text="ABCD123456789"/>
+      <MSChartObject Name="MSChart1" Left="151.2" Top="444.15" Width="510.3" Height="189" ChartData="PENoYXJ0IEJvcmRlcmxpbmVDb2xvcj0iRGFya0dyYXkiIEJvcmRlcmxpbmVXaWR0aD0iMiIgQm9yZGVybGluZURhc2hTdHlsZT0iU29saWQiPg0KICA8U2VyaWVzPg0KICAgIDxTZXJpZXMgTmFtZT0iU2VyaWVzMSIgTGVnZW5kPSJEZWZhdWx0IiBYVmFsdWVUeXBlPSJTdHJpbmciIFlWYWx1ZVR5cGU9IkRvdWJsZSIgQ2hhcnRBcmVhPSJEZWZhdWx0Ij4NCiAgICA8L1Nlcmllcz4NCiAgPC9TZXJpZXM+DQogIDxMZWdlbmRzPg0KICAgIDxMZWdlbmQgTmFtZT0iRGVmYXVsdCI+DQogICAgPC9MZWdlbmQ+DQogIDwvTGVnZW5kcz4NCiAgPFRpdGxlcz4NCiAgICA8VGl0bGUgTmFtZT0iVGl0bGUxIiBWaXNpYmxlPSJGYWxzZSI+DQogICAgPC9UaXRsZT4NCiAgPC9UaXRsZXM+DQogIDxDaGFydEFyZWFzPg0KICAgIDxDaGFydEFyZWEgTmFtZT0iRGVmYXVsdCI+DQogICAgICA8QXhpc1k+DQogICAgICAgIDxNYWpvckdyaWQgTGluZUNvbG9yPSI2NCwgNjQsIDY0LCA2NCIgLz4NCiAgICAgIDwvQXhpc1k+DQogICAgICA8QXhpc1g+DQogICAgICAgIDxNYWpvckdyaWQgTGluZUNvbG9yPSI2NCwgNjQsIDY0LCA2NCIgLz4NCiAgICAgIDwvQXhpc1g+DQogICAgICA8QXhpc1gyPg0KICAgICAgICA8TWFqb3JHcmlkIExpbmVDb2xvcj0iNjQsIDY0LCA2NCwgNjQiIC8+DQogICAgICA8L0F4aXNYMj4NCiAgICAgIDxBeGlzWTI+DQogICAgICAgIDxNYWpvckdyaWQgTGluZUNvbG9yPSI2NCwgNjQsIDY0LCA2NCIgLz4NCiAgICAgIDwvQXhpc1kyPg0KICAgIDwvQ2hhcnRBcmVhPg0KICA8L0NoYXJ0QXJlYXM+DQogIDxCb3JkZXJTa2luIFNraW5TdHlsZT0iRW1ib3NzIiAvPg0KPC9DaGFydD4=">
+        <MSChartSeries Name="Series1"/>
+      </MSChartObject>
+      <ZipCodeObject Name="ZipCode1" Left="94.5" Top="661.5" Width="238.14" Height="55.92"/>
+      <CellularTextObject Name="CellularText1" Left="94.5" Top="746.55" Width="226.8" Height="28.35" Font="宋体, 9pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="1009.7" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

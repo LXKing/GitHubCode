@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/13/2017 15:14:44" ReportInfo.Modified="02/26/2018 20:52:35" ReportInfo.CreatorVersion="2013.2.5.0">
+  <Dictionary/>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="TextObject_Title" Width="718.2" Height="37.8" Dock="Fill" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="39.8" Width="718.2" Height="47.25">
+      <LineObject Name="Line7" Left="37.8" Top="28.35" Width="519.75" Diagonal="true"/>
+      <LineObject Name="Line8" Left="37.8" Top="28.35" Height="18.9"/>
+      <LineObject Name="Line9" Left="103.95" Top="28.35" Height="18.9"/>
+      <LineObject Name="Line10" Left="330.75" Top="28.35" Height="18.9"/>
+      <TextObject Name="Text4" Left="37.8" Top="28.35" Width="66.15" Height="18.9" Font="宋体, 9pt"/>
+      <TextObject Name="Text5" Left="151.2" Top="28.35" Width="66.15" Height="18.9" Text="分数1" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+      <TextObject Name="Text6" Left="406.35" Top="28.35" Width="66.15" Height="18.9" Text="分数2" HorzAlign="Center" VertAlign="Center" Font="宋体, 9pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="89.05" Width="718.2" Height="151.2">
+      <LineObject Name="Line1" Left="37.8" Width="519.75" Diagonal="true"/>
+      <LineObject Name="Line2" Left="37.8" Height="18.9"/>
+      <LineObject Name="Line4" Left="557.55" Top="18.9" Height="-18.9"/>
+      <LineObject Name="Line5" Left="103.95" Height="18.9"/>
+      <LineObject Name="Line6" Left="330.75" Height="18.9"/>
+      <TextObject Name="Text1" Left="37.8" Width="66.15" Height="18.9" Font="宋体, 9pt"/>
+      <TextObject Name="Text2" Left="151.2" Width="66.15" Height="18.9" Text="[Score1]" Font="宋体, 9pt"/>
+      <TextObject Name="Text3" Left="406.35" Width="66.15" Height="18.9" Text="[Score2]" Font="宋体, 9pt"/>
+      <LineObject Name="Line3" Left="37.8" Top="18.9" Width="519.75"/>
+      <LineObject Name="Line11" Left="37.8" Width="519.75"/>
+      <LineObject Name="Line12" Left="557.55" Top="-1" Height="-18.9"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="242.25" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

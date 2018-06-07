@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FBF998F-45C4-45A2-B528-4473DCC02A97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XCI.WinUtility</RootNamespace>
+    <AssemblyName>WinUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\AppRelease\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v11.2.Core, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Design.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v11.2.Core, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v11.2.Core, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.2.Design, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.2.UI, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.2.Design, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.2.Design, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.2.Extensions, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.2.Printing, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.2.Design, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v11.2, Version=11.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentManager\frmComponentAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentManager\frmComponentAbout.designer.cs">
+      <DependentUpon>frmComponentAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentManager\frmComponentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentManager\frmComponentEdit.Designer.cs">
+      <DependentUpon>frmComponentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentManager\frmComponentManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentManager\frmComponentManager.Designer.cs">
+      <DependentUpon>frmComponentManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentManager\frmComponentSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentManager\frmComponentSetting.Designer.cs">
+      <DependentUpon>frmComponentSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentManager\frmParamEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentManager\frmParamEdit.Designer.cs">
+      <DependentUpon>frmParamEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ComboBoxEditX.cs" />
+    <Compile Include="Control\ComboBoxEditXDesigner.cs" />
+    <Compile Include="Control\ComboBoxEditXDesignerActionList.cs" />
+    <Compile Include="Control\CurrencyManagerHelper.cs" />
+    <Compile Include="Control\PopupSelectedEventArgs.cs" />
+    <Compile Include="Control\XCITimeEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\XCIPopupGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\LineControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\TransparentLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\WatermarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\XCIGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\XCIPopupGridEdit.cs" />
+    <Compile Include="Control\XCIPropertyGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\XCIPropertyGrid.Designer.cs">
+      <DependentUpon>XCIPropertyGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\XCITextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\XCITreeGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentManager\ListViewHelper.cs" />
+    <Compile Include="ComponentManager\ComponentManager.cs" />
+    <Compile Include="Control\XCIPopupTreeGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DevExpressLocalization\AccLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\ChartLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\DevExpressXtraGaugesLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\DevExpressXtraGaugesPresetsLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\GridLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\LayoutLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraBarsDocking2010Localizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraBarsDockingLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraBarsLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraEditorsLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraNavBarLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraPivotGridLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraPrintingLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraReportsLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraRichEditExtensionsLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraRichEditLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraSchedulerExtensions_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraSchedulerLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraSpellChecker_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraTreeListLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraVerticalGridLocalizer_zhchs.cs" />
+    <Compile Include="DevExpressLocalization\XtraWizardLocalizer_zhchs.cs" />
+    <Compile Include="Core\FormHelper.cs" />
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\GridConfigFactory.cs" />
+    <Compile Include="GridConfig\GridConfigTemplateEntity.cs" />
+    <Compile Include="GridConfig\IGridConfig.cs" />
+    <Compile Include="GridConfig\IGridConfigTemplate.cs" />
+    <Compile Include="GridConfig\UI\frmGridConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridConfig\UI\frmGridConfig.designer.cs">
+      <DependentUpon>frmGridConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\UI\GridAdvancedEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridConfig\UI\GridAdvancedEditor.designer.cs">
+      <DependentUpon>GridAdvancedEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\UI\GridAppearanceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridConfig\UI\GridAppearanceEditor.designer.cs">
+      <DependentUpon>GridAppearanceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\UI\GridColumnEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridConfig\UI\GridColumnEditor.designer.cs">
+      <DependentUpon>GridColumnEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\UI\GridExpressionConditionsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridConfig\UI\GridExpressionConditionsEditor.designer.cs">
+      <DependentUpon>GridExpressionConditionsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\UI\GridGeneralEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridConfig\UI\GridGeneralEditor.designer.cs">
+      <DependentUpon>GridGeneralEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\UI\GridTemplateEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridConfig\UI\GridTemplateEditor.designer.cs">
+      <DependentUpon>GridTemplateEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\GridConfigTemplateFactory.cs" />
+    <Compile Include="GridConfig\UI\TreeGeneralEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridConfig\UI\TreeGeneralEditor.designer.cs">
+      <DependentUpon>TreeGeneralEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\UI\frmTreeGridConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridConfig\UI\frmTreeGridConfig.designer.cs">
+      <DependentUpon>frmTreeGridConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\UI\TreeColumnEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridConfig\UI\TreeColumnEditor.designer.cs">
+      <DependentUpon>TreeColumnEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\UI\TreeExpressionConditionsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridConfig\UI\TreeExpressionConditionsEditor.designer.cs">
+      <DependentUpon>TreeExpressionConditionsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridConfig\实现\XmlGridConfig.cs" />
+    <Compile Include="GridConfig\实现\XmlGridConfigTemplate.cs" />
+    <Compile Include="GridOperate\frmGridRecycleBin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridOperate\frmGridRecycleBin.Designer.cs">
+      <DependentUpon>frmGridRecycleBin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GridOperate\GridEditOperate.cs" />
+    <Compile Include="GridOperate\GridListOperate.cs" />
+    <Compile Include="GridOperate\frmTreeRecycleBin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridOperate\frmTreeRecycleBin.Designer.cs">
+      <DependentUpon>frmTreeRecycleBin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectListView\CellEditing\CellEditKeyEngine.cs" />
+    <Compile Include="ObjectListView\CellEditing\CellEditors.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\CellEditing\EditorRegistry.cs" />
+    <Compile Include="ObjectListView\DataListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\DragDrop\DragSource.cs" />
+    <Compile Include="ObjectListView\DragDrop\DropSink.cs" />
+    <Compile Include="ObjectListView\DragDrop\OLVDataObject.cs" />
+    <Compile Include="ObjectListView\FastDataListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\FastObjectListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\Filtering\Cluster.cs" />
+    <Compile Include="ObjectListView\Filtering\ClusteringStrategy.cs" />
+    <Compile Include="ObjectListView\Filtering\ClustersFromGroupsStrategy.cs" />
+    <Compile Include="ObjectListView\Filtering\DateTimeClusteringStrategy.cs" />
+    <Compile Include="ObjectListView\Filtering\FilterMenuBuilder.cs" />
+    <Compile Include="ObjectListView\Filtering\Filters.cs" />
+    <Compile Include="ObjectListView\Filtering\ICluster.cs" />
+    <Compile Include="ObjectListView\Filtering\IClusteringStrategy.cs" />
+    <Compile Include="ObjectListView\Filtering\TextMatchFilter.cs" />
+    <Compile Include="ObjectListView\Implementation\Attributes.cs" />
+    <Compile Include="ObjectListView\Implementation\Comparers.cs" />
+    <Compile Include="ObjectListView\Implementation\DataSourceAdapter.cs" />
+    <Compile Include="ObjectListView\Implementation\Delegates.cs" />
+    <Compile Include="ObjectListView\Implementation\Enums.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\Implementation\Events.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\Implementation\GroupingParameters.cs" />
+    <Compile Include="ObjectListView\Implementation\Groups.cs" />
+    <Compile Include="ObjectListView\Implementation\Munger.cs" />
+    <Compile Include="ObjectListView\Implementation\NativeMethods.cs" />
+    <Compile Include="ObjectListView\Implementation\NullableDictionary.cs" />
+    <Compile Include="ObjectListView\Implementation\OLVListItem.cs" />
+    <Compile Include="ObjectListView\Implementation\OLVListSubItem.cs" />
+    <Compile Include="ObjectListView\Implementation\OlvListViewHitTestInfo.cs" />
+    <Compile Include="ObjectListView\Implementation\VirtualGroups.cs" />
+    <Compile Include="ObjectListView\Implementation\VirtualListDataSource.cs" />
+    <Compile Include="ObjectListView\ObjectListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\ObjectListView.DesignTime.cs" />
+    <Compile Include="ObjectListView\OLVColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\Rendering\Adornments.cs" />
+    <Compile Include="ObjectListView\Rendering\Decorations.cs" />
+    <Compile Include="ObjectListView\Rendering\Overlays.cs" />
+    <Compile Include="ObjectListView\Rendering\Renderers.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\Rendering\Styles.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\Rendering\TreeRenderer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\SubControls\GlassPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\SubControls\HeaderControl.cs" />
+    <Compile Include="ObjectListView\SubControls\ToolStripCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\SubControls\ToolTipControl.cs" />
+    <Compile Include="ObjectListView\TreeListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\Utilities\ColumnSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectListView\Utilities\ColumnSelectionForm.Designer.cs">
+      <DependentUpon>ColumnSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectListView\Utilities\Generator.cs" />
+    <Compile Include="ObjectListView\Utilities\TypedObjectListView.cs" />
+    <Compile Include="ObjectListView\VirtualObjectListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GridOperate\OperateEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Core\TabLoadHelper.cs" />
+    <Compile Include="GridOperate\ValidateRule.cs" />
+    <Compile Include="Core\XtraMessageBoxHelper.cs" />
+    <Compile Include="GridOperate\TreeEditOperate.cs" />
+    <Compile Include="GridOperate\TreeListOperate.cs" />
+    <Compile Include="UserControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlBase.Designer.cs">
+      <DependentUpon>UserControlBase.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XCI.Core\XCI.Core.csproj">
+      <Project>{D94FBB9A-FBF2-4A6B-B2C4-62CBDCEFC05D}</Project>
+      <Name>XCI.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComponentManager\frmComponentAbout.resx">
+      <DependentUpon>frmComponentAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentManager\frmComponentEdit.resx">
+      <DependentUpon>frmComponentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentManager\frmComponentManager.resx">
+      <DependentUpon>frmComponentManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentManager\frmComponentSetting.resx">
+      <DependentUpon>frmComponentSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentManager\frmParamEdit.resx">
+      <DependentUpon>frmParamEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\XCIGrid.resx">
+      <DependentUpon>XCIGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\XCIPropertyGrid.resx">
+      <DependentUpon>XCIPropertyGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridConfig\UI\frmGridConfig.resx">
+      <DependentUpon>frmGridConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridConfig\UI\frmTreeGridConfig.resx">
+      <DependentUpon>frmTreeGridConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridConfig\UI\GridAdvancedEditor.resx">
+      <DependentUpon>GridAdvancedEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridConfig\UI\GridAppearanceEditor.resx">
+      <DependentUpon>GridAppearanceEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridConfig\UI\GridColumnEditor.resx">
+      <DependentUpon>GridColumnEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridConfig\UI\GridExpressionConditionsEditor.resx">
+      <DependentUpon>GridExpressionConditionsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridConfig\UI\GridGeneralEditor.resx">
+      <DependentUpon>GridGeneralEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridConfig\UI\GridTemplateEditor.resx">
+      <DependentUpon>GridTemplateEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridConfig\UI\TreeGeneralEditor.resx">
+      <DependentUpon>TreeGeneralEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridConfig\UI\TreeColumnEditor.resx">
+      <DependentUpon>TreeColumnEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridConfig\UI\TreeExpressionConditionsEditor.resx">
+      <DependentUpon>TreeExpressionConditionsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridOperate\frmGridRecycleBin.resx">
+      <DependentUpon>frmGridRecycleBin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GridOperate\frmTreeRecycleBin.resx">
+      <DependentUpon>frmTreeRecycleBin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectListView\Utilities\ColumnSelectionForm.resx">
+      <DependentUpon>ColumnSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlBase.resx">
+      <DependentUpon>UserControlBase.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear-filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter-icons3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort-ascending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort-descending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XCIPropertyGridHead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GridConfig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TreeEdit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goBottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goFirst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goLast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goNext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goPrevious.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecordAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecordCopy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecordDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecordEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecordExport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecordSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecordSaveClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecordSaveNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchClean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchCommit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchCommitRefresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchFind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectInverse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TreeAdd.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TreeAddRoot.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TreeDelete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecycleBin.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{350C070A-1A1D-4C99-B8B8-AA3167F1CAB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>COMMON</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\AppRelease\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\AppRelease\COMMON.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\Exam\Code\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Paged\IPage.cs" />
+    <Compile Include="Data\Paged\IPagedList.cs" />
+    <Compile Include="Data\Paged\PagedList.cs" />
+    <Compile Include="Data\ResultEntity.cs" />
+    <Compile Include="System\System.Dynamic\DynamicEx.cs" />
+    <Compile Include="System\System.Dynamic\DynamicJson.cs" />
+    <Compile Include="Encryption\Cipher.cs" />
+    <Compile Include="EntityBase\BaseClass.cs" />
+    <Compile Include="Extension\System.IO\DirectoryInfoEx.cs" />
+    <Compile Include="Extension\System.Data\DataRowEx.cs" />
+    <Compile Include="Extension\System.Data\DataSetEx.cs" />
+    <Compile Include="Extension\System.Data\DataTableEx.cs" />
+    <Compile Include="System\ReflectionEx.cs" />
+    <Compile Include="Extension\System.Collections.Generic\DictionaryEx.cs" />
+    <Compile Include="Extension\System.Collections.Generic\IEnumerableEx.cs" />
+    <Compile Include="Extension\System.IO\StreamEx.cs" />
+    <Compile Include="Extension\System.Xml\XmlDocumentEx.cs" />
+    <Compile Include="Extension\System\ByteEx.cs" />
+    <Compile Include="Extension\System\DateTimeEx.cs" />
+    <Compile Include="Extension\System\EnumEx.cs" />
+    <Compile Include="Extension\System.Collections.Generic\IListEx.cs" />
+    <Compile Include="Extension\System\ExceptionEx.cs" />
+    <Compile Include="Extension\System\IntEx.cs" />
+    <Compile Include="Extension\System\ObjectEx.cs" />
+    <Compile Include="Extension\System\StringEx.cs" />
+    <Compile Include="System\TypeEx.cs" />
+    <Compile Include="Extension\System.Xml\XmlNodeEx.cs" />
+    <Compile Include="Extension\System.Windows.Forms\ControlEx.cs" />
+    <Compile Include="IDCard\IReadIDCard.cs" />
+    <Compile Include="IDCard\PersonInfo.cs" />
+    <Compile Include="IDCard\ReadIDCard.cs" />
+    <Compile Include="Logs\Log.cs" />
+    <Compile Include="Logs\LogSort.cs" />
+    <Compile Include="Net\HttpClient\HttpCookieType.cs" />
+    <Compile Include="Net\HttpClient\HttpProvider.cs" />
+    <Compile Include="Net\HttpClient\HttpRequestParameter.cs" />
+    <Compile Include="Net\HttpClient\HttpResponseParameter.cs" />
+    <Compile Include="Net\HttpClient\HttpUtil.cs" />
+    <Compile Include="Net\HttpClient\IHttpClient.cs" />
+    <Compile Include="Net\HttpLib\HttpVerb.cs" />
+    <Compile Include="Net\HttpLib\NamedFileStream.cs" />
+    <Compile Include="Net\HttpLib\RequestClient.cs" />
+    <Compile Include="Net\HttpLib\Utils.cs" />
+    <Compile Include="Net\HttpProc.cs" />
+    <Compile Include="Net\IPAddressEx.cs" />
+    <Compile Include="Encryption\Md5.cs" />
+    <Compile Include="Net\MacAddressEx.cs" />
+    <Compile Include="Newtonsoft.Json\JsonConvertEx.cs" />
+    <Compile Include="Pay\PayHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerialPorts\SerialPortHelper0.cs" />
+    <Compile Include="SerialPorts\SerialPortHelper.cs" />
+    <Compile Include="SerialPorts\SerialPortHelper1.cs" />
+    <Compile Include="System\System.Configuration\ConfigurationHelp.cs" />
+    <Compile Include="Validate\Validator.cs" />
+    <Compile Include="WinAPI\Win32_Window.cs" />
+    <Compile Include="Windows\Forms\MessageBoxHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Paged\Paged.dgml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Encryption\Encryption.dgml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Paged\readme.txt" />
+    <Content Include="Extension\Readme.txt" />
+    <Content Include="Logs\Readme.txt" />
+    <Content Include="Net\网络访问.txt" />
+    <Content Include="SerialPorts\串口组件类.txt" />
+    <Content Include="Validate\验证类.txt" />
+    <Content Include="引用的dll.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

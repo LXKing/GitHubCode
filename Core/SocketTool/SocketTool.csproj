@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{DFE8ACA6-ABAF-40E1-B7DC-659A5D57AD06}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>SocketTool</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globitrust.Net.P2PMessaging\BitConverter.cs" />
+    <Compile Include="Globitrust.Net.P2PMessaging\SendStatus.cs" />
+    <Compile Include="SocketTool.Core\CommTcpClient.cs" />
+    <Compile Include="SocketTool.Core\CommTcpServer.cs" />
+    <Compile Include="SocketTool.Core\CommUdpClient.cs" />
+    <Compile Include="SocketTool.Core\CommUdpServer.cs" />
+    <Compile Include="SocketTool.Core\IClient.cs" />
+    <Compile Include="SocketTool.Core\IConnection.cs" />
+    <Compile Include="SocketTool.Core\IPacket.cs" />
+    <Compile Include="SocketTool.Core\IServer.cs" />
+    <Compile Include="SocketTool.Core\ISocketInfo.cs" />
+    <Compile Include="SocketTool.Core\MsgHandler.cs" />
+    <Compile Include="SocketTool.Core\NetTest.cs" />
+    <Compile Include="SocketTool.Core\PacketUtil.cs" />
+    <Compile Include="SocketTool.Core\ParseUtil.cs" />
+    <Compile Include="SocketTool.Core\ReceivedEventArgs.cs" />
+    <Compile Include="SocketTool.Core\ReceivedHandler.cs" />
+    <Compile Include="SocketTool.Core\SocketErrorHandler.cs" />
+    <Compile Include="SocketTool.Core\SocketEventArgs.cs" />
+    <Compile Include="SocketTool.Core\SocketInfo.cs" />
+    <Compile Include="SocketTool.Core\SocketUtil.cs" />
+    <Compile Include="SocketTool.Core\TcpConnection.cs" />
+    <Compile Include="SocketTool.Core\UdpConnection.cs" />
+    <Compile Include="SocketTool.Properties\Resources.cs" />
+    <Compile Include="SocketTool.Properties\Settings.cs" />
+    <Compile Include="SocketTool.Udp\AuthenticatedEventArgs.cs" />
+    <Compile Include="SocketTool.Udp\AuthenticatedHandler.cs" />
+    <Compile Include="SocketTool.Udp\BroadcastFilter.cs" />
+    <Compile Include="SocketTool.Udp\Command.cs" />
+    <Compile Include="SocketTool.Udp\CommandEventArgs.cs" />
+    <Compile Include="SocketTool.Udp\CommonUdp.cs" />
+    <Compile Include="SocketTool.Udp\Connection.cs" />
+    <Compile Include="SocketTool.Udp\ConnectionAuthEventArgs.cs" />
+    <Compile Include="SocketTool.Udp\ConnectionAuthHandler.cs" />
+    <Compile Include="SocketTool.Udp\ConnectionList.cs" />
+    <Compile Include="SocketTool.Udp\ConnectionStateChangeEventArgs.cs" />
+    <Compile Include="SocketTool.Udp\ConnectionStateChangeHandler.cs" />
+    <Compile Include="SocketTool.Udp\ConnTimeout.cs" />
+    <Compile Include="SocketTool.Udp\DebugEventArgs.cs" />
+    <Compile Include="SocketTool.Udp\DebugHandler.cs" />
+    <Compile Include="SocketTool.Udp\ICommand.cs" />
+    <Compile Include="SocketTool.Udp\IConnection.cs" />
+    <Compile Include="SocketTool.Udp\IGenesisUDP.cs" />
+    <Compile Include="SocketTool.Udp\IncomingCommandHandler.cs" />
+    <Compile Include="SocketTool.Udp\InterfaceFactory.cs" />
+    <Compile Include="SocketTool.Udp\ListenEventArgs.cs" />
+    <Compile Include="SocketTool.Udp\ListenHandler.cs" />
+    <Compile Include="SocketTool.Udp\LoginSendEventArgs.cs" />
+    <Compile Include="SocketTool.Udp\ReceivedEventArgs.cs" />
+    <Compile Include="SocketTool.Udp\ReceivedHandler.cs" />
+    <Compile Include="SocketTool.Udp\ReliableEntry.cs" />
+    <Compile Include="SocketTool.Udp\ReliableQueue.cs" />
+    <Compile Include="SocketTool.Udp\RequestTimedOutEventArgs.cs" />
+    <Compile Include="SocketTool.Udp\RequestTimedOutHandler.cs" />
+    <Compile Include="SocketTool.Udp\SendLoginHandler.cs" />
+    <Compile Include="SocketTool.Udp\SocketErrorHandler.cs" />
+    <Compile Include="SocketTool.Udp\SocketEventArgs.cs" />
+    <Compile Include="SocketTool.Udp\TimeoutEntry.cs" />
+    <Compile Include="SocketTool.Udp\UdpConsts.cs" />
+    <Compile Include="SocketTool.Udp\Util.cs" />
+    <Compile Include="SocketTool\BroadcastFilter.cs" />
+    <Compile Include="SocketTool\ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SocketTool\ClientForm_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SocketTool\ClientForm_New.Designer.cs">
+      <DependentUpon>ClientForm_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SocketTool\Constants.cs" />
+    <Compile Include="SocketTool\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SocketTool\MySerializer.cs" />
+    <Compile Include="SocketTool\Program.cs" />
+    <Compile Include="SocketTool\ServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SocketTool\Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SocketTool.Properties\Resources.resources" />
+    <EmbeddedResource Include="SocketTool\ClientForm.resources" />
+    <EmbeddedResource Include="SocketTool\ClientForm_New.resx">
+      <DependentUpon>ClientForm_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SocketTool\MainForm.resources" />
+    <EmbeddedResource Include="SocketTool\ServerForm.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="socketinfo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

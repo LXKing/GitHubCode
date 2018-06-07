@@ -1,0 +1,5 @@
+﻿引用.Net自带
+System.Configuration
+Microsoft.VisualBasic
+引用第三方
+Newtonsoft.Json.dll

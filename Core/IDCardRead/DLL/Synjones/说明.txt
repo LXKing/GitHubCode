@@ -1,0 +1,1 @@
+将license.dat复制到c:\下

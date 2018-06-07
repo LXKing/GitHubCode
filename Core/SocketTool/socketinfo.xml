@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<ArrayOfSocketInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SocketInfo>
+    <Names>客户端1</Names>
+    <Types>Client</Types>
+    <Format>UTF-8</Format>
+    <ServerIp>127.0.0.1</ServerIp>
+    <Port>9087</Port>
+    <Protocol>Tcp</Protocol>
+    <Data>SEARCH|127.0.0.1|9087|01|20170911|汉中|1002|END</Data>
+    <IsAuto>false</IsAuto>
+  </SocketInfo>
+  <SocketInfo>
+    <Names>服务器端1</Names>
+    <Types>Server</Types>
+    <Format>UTF-8</Format>
+    <ServerIp>127.0.0.1</ServerIp>
+    <Port>9087</Port>
+    <Protocol>Tcp</Protocol>
+    <Data>请录入测试数据</Data>
+    <IsAuto>false</IsAuto>
+  </SocketInfo>
+</ArrayOfSocketInfo>

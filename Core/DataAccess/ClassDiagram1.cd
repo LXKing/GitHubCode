@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DataAccess.ADO.ADODataAccessBase">
+    <Position X="2.25" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAAAAABICAAICAAAAAAIBACBAAEQAAAAAEAEAiEBAA=</HashCode>
+      <FileName>ADO\ADODataAccessBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataAccess.ADO.SqlDataAccess">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAIAACAAAEAAAAAAAAAAgEAAA=</HashCode>
+      <FileName>ADO\SqlDataAccess.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="1.161" />
+  </Class>
+  <Class Name="System.Data.DataSetEx" Collapsed="true">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAQAAA=</HashCode>
+      <FileName>COMMON\DataSetEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Data.DataTableEx" Collapsed="true">
+    <Position X="11.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAQAAIAAQAAAQAAA=</HashCode>
+      <FileName>COMMON\DataTableEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.IListEx" Collapsed="true">
+    <Position X="11.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAgAAQ=</HashCode>
+      <FileName>COMMON\IListEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.ObjectEx" Collapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAABAgQAAAAAIABAAIAA=</HashCode>
+      <FileName>COMMON\ObjectEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.ReflectionEx" Collapsed="true">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAABAAAAAAAAAAAAIAAAAAAAAgAAAA=</HashCode>
+      <FileName>COMMON\ReflectionEx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.ResultInfo&lt;T&gt;" Collapsed="true">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAABgAAAAAhEAABgAEAAEIBAACEA=</HashCode>
+      <FileName>COMMON\ResultInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataAccess.EF.EFDataAccessAsTran" BaseTypeListCollapsed="true">
+    <Position X="9" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAoCAABAAAAAAAAIAAAAEAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>EF\EFDataAccessAsTran.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataAccess.EF.EFDataAccessBase" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EQABgAAAAKAABAAAAAQEAAAAABAAASAgAIAAAAAAAEA=</HashCode>
+      <FileName>EF\EFDataAccessBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataAccess.Oracle.OracleClientHelper">
+    <Position X="0.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAIAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Oracle\OracleClientHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DataAccess.ADO.ISqlDataAccess">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAIAACAAAEAAAAAAAAAAgEAAA=</HashCode>
+      <FileName>ADO\ISqlDataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DataAccess.IADODataAccess">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAABIAAAICAAAAAAIAACAAAEAAAAAAAAAAiEAAA=</HashCode>
+      <FileName>Interface\IADODataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DataAccess.IEFDataAccess">
+    <Position X="6.75" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAIAAAAAAAAAEAAAAAAAAASAAAIAAAAAAAEA=</HashCode>
+      <FileName>Interface\IEFDataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

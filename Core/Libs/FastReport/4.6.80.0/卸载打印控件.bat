@@ -1,0 +1,1 @@
+regsvr32 /u FastReport3.dll

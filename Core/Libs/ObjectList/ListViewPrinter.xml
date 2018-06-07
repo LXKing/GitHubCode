@@ -1,0 +1,854 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ListViewPrinter</name>
+    </assembly>
+    <members>
+        <member name="F:BrightIdeasSoftware.BrushForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BrushForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BrightIdeasSoftware.BrushForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BrightIdeasSoftware.BrushDataEditor">
+            <summary>
+            Editor for use within the IDE when changing BrushFactory values
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BrushDataEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            The user has asked to edit a value. Do it.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BrushDataEditor.GetPaintValueSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Can we paint a representation of our value?
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BrushDataEditor.PaintValue(System.Drawing.Design.PaintValueEventArgs)">
+            <summary>
+            Draw a representation of our value
+            </summary>
+        </member>
+        <member name="T:BrightIdeasSoftware.PenDataEditor">
+            <summary>
+            Editor for use within the IDE when changing BrushFactory values
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.PenDataEditor.EditValue(System.ComponentModel.ITypeDescriptorContext,System.IServiceProvider,System.Object)">
+            <summary>
+            The user has asked to edit a value. Do it.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.PenDataEditor.GetPaintValueSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Can we paint a representation of our value?
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.PenDataEditor.PaintValue(System.Drawing.Design.PaintValueEventArgs)">
+            <summary>
+            Draw a representation of our value
+            </summary>
+        </member>
+        <member name="T:BrightIdeasSoftware.BrushDataConverter">
+            <summary>
+            Instances of this class handle converting BrushFactories to and from various other forms.
+            This class can convert BrushFactories to and from string representations, and can convert
+            to InstanceDescriptor (which are used to convert an object into source code).
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BrushDataConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Indicate that we can convert to a string or to an InstanceDescriptor (these
+            are used to serial an object to code).
+            </summary>
+        </member>
+        <member name="T:BrightIdeasSoftware.PenDataConverter">
+            <summary>
+            Instances of this class handle converting BrushFactories to and from various other forms.
+            This class can convert BrushFactories to and from string representations, and can convert
+            to InstanceDescriptor (which are used to convert an object into source code).
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.PenDataConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Indicate that we can convert to a string or to an InstanceDescriptor (these
+            are used to serial an object to code).
+            </summary>
+        </member>
+        <member name="T:BrightIdeasSoftware.PenData">
+            <summary>
+            PenData represents the data required to create a pen.
+            </summary>
+            <remarks>Pens cannot be edited directly within the IDE (is this VCS EE only?)
+            These objects allow pen characters to be edited within the IDE and then real
+            Pen objects created.</remarks>
+        </member>
+        <member name="T:BrightIdeasSoftware.ListViewPrinterBase">
+            <summary>
+            A ListViewPrinterBase prints or print previews an ListView.
+            </summary>
+            <remarks>
+            <para>The format of the page header/footer, list header and list rows can all be customised.</para>
+            <para>This class works best with ObjectListView class, but still works fine with normal ListViews.
+            If you don't have ObjectListView class in your project, you must define WITHOUT_OBJECTLISTVIEW as one
+            of the conditional compilation symbols on your projects properties.</para>
+            <para>
+            If you do use ObjectListView, and specifically the "Fast" flavours, printing groups will not work --
+            the list will be printed as if groups were off. This is because the "Fast" flavours of ObjectListView 
+            are virtual listviews, and MS doesn't allow virtual listviews to have groups. To make them work in
+            OLV, I had to use undocumented features and avoid the standard Groups mechanism completely. 
+            This printer was written to work against a standard ListView, so uses the standard Groups mechanism,
+            which for virtual lists is always empty. So, no printing of groups for FastObjectListViews.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.#ctor">
+            <summary>
+            Make a new ListViewPrinterBase
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.#ctor(System.Windows.Forms.ListView)">
+            <summary>
+            Make a new ListViewPrinterBase that will print the given ListView
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.GetRowCount(System.Windows.Forms.ListView)">
+            <summary>
+            Return the number of rows that this printer is going to print
+            </summary>
+            <param name="lv">The listview that is being printed</param>
+            <returns>The number of rows that will be displayed</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.GetRow(System.Windows.Forms.ListView,System.Int32)">
+            <summary>
+            Return the n'th row that will be printed
+            </summary>
+            <param name="lv">The listview that is being printed</param>
+            <param name="n">The index of the row to be printed</param>
+            <returns>A ListViewItem</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.GetVirtualItem(System.Windows.Forms.ListView,System.Int32)">
+            <summary>
+            Get the nth item from the given listview, which is in virtual mode.
+            </summary>
+            <param name="lv">The ListView in virtual mode</param>
+            <param name="n">index of item to get</param>
+            <returns>the item</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.GetSubItem(System.Windows.Forms.ListViewItem,System.Int32)">
+            <summary>
+            Return the i'th subitem of the given row, in the order 
+            that coumns are presented in the report
+            </summary>
+            <param name="lvi">The row from which a subitem is to be fetched</param>
+            <param name="i">The index of the subitem in display order</param>
+            <returns>A SubItem</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.GetColumnCount">
+            <summary>
+            Return the number of columns to be printed in the report
+            </summary>
+            <returns>An int</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.GetColumn(System.Int32)">
+            <summary>
+            Return the n'th ColumnHeader (ordered as they should be displayed in the report)
+            </summary>
+            <param name="i">Which column</param>
+            <returns>A ColumnHeader</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.GetGroupAtPosition(System.Int32)">
+            <summary>
+            Return the index of group that starts at the given position.
+            Return -1 if no group starts at that position
+            </summary>
+            <param name="n">The row position in the list</param>
+            <returns>The group index</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PageSetup">
+            <summary>
+            Show a Page Setup dialog to customize the printing of this document
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintPreview">
+            <summary>
+            Show a Print Preview of this document
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintWithDialog">
+            <summary>
+            Print this document after showing a confirmation dialog
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.OnBeginPrint(System.Drawing.Printing.PrintEventArgs)">
+            <summary>
+            A print job is about to be printed
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.OnPrintPage(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            Print a given page
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PreparePrint">
+            <summary>
+            Prepare some precalculated fields used when printing
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintOnePage(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            Do the actual work of printing on page
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.CalculateBounds(System.Drawing.Printing.PrintPageEventArgs)">
+            <summary>
+            Figure out the page bounds and the boundaries for the list
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.CalculatePrintParameters(System.Windows.Forms.ListView)">
+            <summary>
+            Figure out the boundaries for various aspects of the report
+            </summary>
+            <param name="lv">The listview to be printed</param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.ApplyScaling(System.Drawing.Graphics)">
+            <summary>
+            Apply any scaling that is required to the report
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintWatermark(System.Drawing.Graphics)">
+            <summary>
+            Print our watermark on the given Graphic
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintList(System.Drawing.Graphics,System.Windows.Forms.ListView)">
+            <summary>
+            Do the work of printing the list into 'listBounds'
+            </summary>
+            <param name="g">The graphic used for drawing</param>
+            <param name="lv">The listview to be printed</param>
+            <returns>Return true if there are still more pages in the report</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintListHeader(System.Drawing.Graphics,System.Windows.Forms.ListView)">
+            <summary>
+            Print the header of the listview
+            </summary>
+            <param name="g">The graphic used for drawing</param>
+            <param name="lv">The listview to be printed</param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintRows(System.Drawing.Graphics,System.Windows.Forms.ListView)">
+            <summary>
+            Print the rows of the listview
+            </summary>
+            <param name="g">The graphic used for drawing</param>
+            <param name="lv">The listview to be printed</param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.CalculateRowHeight(System.Drawing.Graphics,System.Windows.Forms.ListView,System.Int32)">
+            <summary>
+            Calculate how high the given row of the report should be.
+            </summary>
+            <param name="g">The graphic used for drawing</param>
+            <param name="lv">The listview to be printed</param>
+            <param name="n">The index of the row whose height is to be calculated</param>
+            <returns>The height of one row in pixels</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintGroupHeader(System.Drawing.Graphics,System.Windows.Forms.ListView,System.Int32)">
+            <summary>
+            Print a group header
+            </summary>
+            <param name="g">The graphic used for drawing</param>
+            <param name="lv">The listview to be printed</param>
+            <param name="groupIndex">The index of the group header to be printed</param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintRow(System.Drawing.Graphics,System.Windows.Forms.ListView,System.Int32,System.Single)">
+            <summary>
+            Print one row of the listview
+            </summary>
+            <param name="g"></param>
+            <param name="lv"></param>
+            <param name="row"></param>
+            <param name="rowHeight"></param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintCell(System.Drawing.Graphics,System.Windows.Forms.ListView,System.Windows.Forms.ListViewItem,System.Int32,System.Int32,System.Drawing.RectangleF)">
+            <summary>
+            Print one cell of the listview
+            </summary>
+            <param name="g"></param>
+            <param name="lv"></param>
+            <param name="lvi"></param>
+            <param name="row"></param>
+            <param name="column"></param>
+            <param name="cell"></param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintHeaderFooter(System.Drawing.Graphics)">
+            <summary>
+            Print the page header and page footer
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintPageHeader(System.Drawing.Graphics)">
+            <summary>
+            Print the page header
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.PrintPageFooter(System.Drawing.Graphics)">
+            <summary>
+            Print the page footer
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinterBase.SplitAndFormat(System.String)">
+            <summary>
+            Split the given string into at most three parts, using Tab as the divider. 
+            Perform any substitutions required
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.ListView">
+            <summary>
+            This is the ListView that will be printed
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.IsTextOnly">
+            <summary>
+            Should this report use text only?
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.IsShrinkToFit">
+            <summary>
+            Should this report be shrunk to fit into the width of a page?
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.IsPrintSelectionOnly">
+            <summary>
+            Should this report only include the selected rows in the listview?
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.UseColumnDisplayOrder">
+            <summary>
+            Should this report use the column order as the user sees them? With this enabled,
+            the report will match the order of column as the user has arranged them.
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.AlwaysCenterListHeader">
+            <summary>
+            Should column headings always be centered, even if on the control itself, they are
+            aligned to the left or right?
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.IsListHeaderOnEachPage">
+            <summary>
+            Should listview headings be printed at the top of each page, or just at the top of the list?
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.FirstPage">
+            <summary>
+            Return the index of the first page of the report that should be printed
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.LastPage">
+            <summary>
+            Return the index of the last page of the report that should be printed
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.PageNumber">
+            <summary>
+            Return the number of the page that is currently being printed.
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.IsShowingGroups">
+            <summary>
+            Is this report showing groups? 
+            </summary>
+            <remarks>Groups can't be shown when we are printing selected rows only.</remarks>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.HeaderFormat">
+            <summary>
+            How should the page header be formatted? null means no page header will be printed
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.ListHeaderFormat">
+            <summary>
+            How should the list header be formatted? null means no list header will be printed
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.GroupHeaderFormat">
+            <summary>
+            How should the grouping header be formatted? null means revert to reasonable default
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.CellFormat">
+            <summary>
+            How should the list cells be formatted? null means revert to default
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.FooterFormat">
+            <summary>
+            How should the page footer be formatted? null means no footer will be printed
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.ListFont">
+            <summary>
+            What font will be used to draw the text of the list?
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.ListGridPen">
+            <summary>
+            What pen will be used to draw the cells within the list?
+            If this is null, no grid will be drawn
+            </summary>
+            <remarks>This is just a conviencence wrapper around CellFormat.SetBorderPen</remarks>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.Header">
+            <summary>
+            What string will be written at the top of each page of the report?
+            </summary>
+            <remarks><para>The header can be divided into three parts: left aligned, 
+            centered, and right aligned. If the given string contains Tab characters,
+            everything before the first tab will be left aligned, everything between
+            the first and second tabs will be centered and everything after the second
+            tab will be right aligned.</para>
+            <para>Within each part, the following substitutions are possible:</para>
+            <list>
+            <item>{0} - The page number</item>
+            <item>{1} - The current date/time</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.Footer">
+            <summary>
+            What string will be written at the bottom of each page of the report?
+            </summary>
+            <remarks>The footer, like the header, can have three parts, and behaves
+            in the same way as described as Header.</remarks>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.Watermark">
+            <summary>
+            The watermark will be printed translucently over the report itself
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.WatermarkFont">
+            <summary>
+            What font should be used to print the watermark
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.WatermarkFontOrDefault">
+            <summary>
+            Return the watermark font or a reasonable default
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.WatermarkColor">
+            <summary>
+            What color should be used for the watermark?
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.WatermarkColorOrDefault">
+            <summary>
+            Return the color of the watermark or a reasonable default
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.WatermarkTransparency">
+            <summary>
+            How transparent should the watermark be? &lt;= 0 is transparent, &gt;= 100 is completely opaque.
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.ListViewPrinterBase.ListGridColor">
+            <summary>
+            What color will all the borders be drawn in? 
+            </summary>
+            <remarks>This is just a conviencence wrapper around ListGridPen</remarks>
+        </member>
+        <member name="T:BrightIdeasSoftware.ListViewPrinter">
+            <summary>
+            This ListViewPrinterBase handles only normal ListViews, while this class knows about the specifics of ObjectListViews
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinter.#ctor">
+            <summary>
+            Make a ListViewPrinter
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinter.GetVirtualItem(System.Windows.Forms.ListView,System.Int32)">
+            <summary>
+            Get the nth item from the given listview, which is in virtual mode.
+            </summary>
+            <param name="lv">The ListView in virtual mode</param>
+            <param name="n">index of item to get</param>
+            <returns>the item</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinter.CalculateRowHeight(System.Drawing.Graphics,System.Windows.Forms.ListView,System.Int32)">
+            <summary>
+            Calculate how high each row of the report should be.
+            </summary>
+            <param name="g">The graphic used for drawing</param>
+            <param name="lv">The listview to be printed</param>
+            <param name="n"></param>
+            <returns>The height of one row in pixels</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinter.ApplyCellSpecificBackground(BrightIdeasSoftware.BlockFormat,System.Windows.Forms.ListViewItem,System.Windows.Forms.ListViewItem.ListViewSubItem)">
+            <summary>
+            If the given BlockFormat doesn't specify a background, take it from the SubItem or the ListItem.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.ListViewPrinter.PrintCell(System.Drawing.Graphics,System.Windows.Forms.ListView,System.Windows.Forms.ListViewItem,System.Int32,System.Int32,System.Drawing.RectangleF)">
+            <summary>
+            Print one cell of the ListView
+            </summary>
+            <param name="g"></param>
+            <param name="lv"></param>
+            <param name="lvi"></param>
+            <param name="row"></param>
+            <param name="column"></param>
+            <param name="cell"></param>
+        </member>
+        <member name="T:BrightIdeasSoftware.Sides">
+            <summary>
+            Specify which sides of a block will be operated on
+            </summary>
+        </member>
+        <member name="F:BrightIdeasSoftware.Sides.Left">
+            <summary>
+            Left
+            </summary>
+        </member>
+        <member name="F:BrightIdeasSoftware.Sides.Top">
+            <summary>
+            Top
+            </summary>
+        </member>
+        <member name="F:BrightIdeasSoftware.Sides.Right">
+            <summary>
+            Right
+            </summary>
+        </member>
+        <member name="F:BrightIdeasSoftware.Sides.Bottom">
+            <summary>
+            Bottom
+            </summary>
+        </member>
+        <member name="F:BrightIdeasSoftware.Sides.All">
+            <summary>
+            All
+            </summary>
+        </member>
+        <member name="T:BrightIdeasSoftware.BlockFormat">
+            <summary>
+            A BlockFormat controls the formatting and style of a single part (block) of a 
+            ListViewPrinter output.
+            </summary>
+        </member>
+        <member name="F:BrightIdeasSoftware.BlockFormat.TextBrush">
+            <summary>
+            What brush will be used to draw the text? 
+            </summary>
+            <remarks>
+            <para>If this format is used for cells and this is null AND an ObjectListView is being printed, 
+            then the text color from the listview will be used.
+            This is useful when you have setup specific colors on a RowFormatter delegate, for example.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:BrightIdeasSoftware.BlockFormat.BackgroundBrush">
+            <summary>
+            What brush will be used to paint the background?
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.GetPadding(BrightIdeasSoftware.Sides)">
+            <summary>
+            Get the padding for a particular side. 0 means no padding on that side.
+            Padding appears before the border does.
+            </summary>
+            <param name="side">Which side</param>
+            <returns>The width of the padding</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.SetPadding(BrightIdeasSoftware.Sides,System.Single)">
+            <summary>
+            Set the padding for a particular side. 0 means no padding on that side.
+            </summary>
+            <param name="side">Which side</param>
+            <param name="value">How much padding</param>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.GetBorderBrush(BrightIdeasSoftware.Sides)">
+            <summary>
+            Get the width of the border on a particular side. 0 means no border on that side.
+            </summary>
+            <param name="side">Which side</param>
+            <returns>The width of the border</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.GetBorderPen(BrightIdeasSoftware.Sides)">
+            <summary>
+            Get the pen of the border on a particular side. 
+            </summary>
+            <param name="side">Which side</param>
+            <returns>The pen of the border</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.GetBorderWidth(BrightIdeasSoftware.Sides)">
+            <summary>
+            Get the width of the border on a particular side. 0 means no border on that side.
+            </summary>
+            <param name="side">Which side</param>
+            <returns>The width of the border</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.SetBorder(BrightIdeasSoftware.Sides,System.Single,System.Drawing.Brush)">
+            <summary>
+            Change the brush and width of the border on a particular side. 0 means no border on that side.
+            </summary>
+            <param name="side">Which side</param>
+            <param name="width">How wide should it be?</param>
+            <param name="brush">What brush should be used to paint it</param>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.SetBorderPen(BrightIdeasSoftware.Sides,System.Drawing.Pen)">
+            <summary>
+            Change the pen of the border on a particular side.
+            </summary>
+            <param name="side">Which side</param>
+            <param name="p">What pen should be used to draw it</param>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.GetTextInset(BrightIdeasSoftware.Sides)">
+            <summary>
+            Get the distance that the text should be inset from the border on a given side
+            </summary>
+            <param name="side">Which side</param>
+            <returns>Distance of text inset</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.SetTextInset(BrightIdeasSoftware.Sides,System.Single)">
+            <summary>
+            Set the distance that the text should be inset from the border on a given side
+            </summary>
+            <param name="side">Which side</param>
+            <param name="value">Distance of text inset</param>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.CalculateHeight(System.Drawing.Graphics)">
+            <summary>
+            Calculate how height this block will be when its printed on one line
+            </summary>
+            <param name="g">The Graphic to use for renderering</param>
+            <returns></returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.CalculateHeight(System.Drawing.Graphics,System.String,System.Int32)">
+            <summary>
+            Calculate how height this block will be when it prints the given string 
+            to a maximum of the given width
+            </summary>
+            <param name="g">The Graphic to use for renderering</param>
+            <param name="s">The string to be considered</param>
+            <param name="width">The max width for the rendering</param>
+            <returns>The height that will be used</returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.CalculatePaddedBox(System.Drawing.RectangleF)">
+            <summary>
+            Given a bounding box return the box after applying the padding factors
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.CalculateBorderedBox(System.Drawing.RectangleF)">
+            <summary>
+            Given an already padded box, return the box into which the text will be drawn.
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.CalculateTextBox(System.Drawing.RectangleF)">
+            <summary>
+            Given an already padded and bordered box, return the box into which the text will be drawn.
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.CalculatePaddedTextBox(System.Drawing.RectangleF)">
+            <summary>
+            Apply paddeding and text insets to the given rectangle
+            </summary>
+            <param name="cell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.Draw(System.Drawing.Graphics,System.Drawing.RectangleF,System.String,System.Windows.Forms.HorizontalAlignment)">
+            <summary>
+            Draw the given string aligned within the given cell
+            </summary>
+            <param name="g">Graphics to draw on</param>
+            <param name="r">Cell into which the text is to be drawn</param>
+            <param name="s">The string to be drawn</param>
+            <param name="align">How should the string be aligned</param>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.Draw(System.Drawing.Graphics,System.Drawing.RectangleF,System.String[])">
+            <summary>
+            Draw the array of strings so that the first string is left aligned,
+            the second is centered and the third is right aligned. All strings 
+            are optional. Extra strings are ignored.
+            </summary>
+            <param name="g">Graphics to draw on</param>
+            <param name="r">Cell into which the text is to be drawn</param>
+            <param name="strings">Array of strings</param>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.Draw(System.Drawing.Graphics,System.Drawing.RectangleF,System.String,System.String,System.String)">
+            <summary>
+            Draw this block
+            </summary>
+            <param name="g"></param>
+            <param name="r"></param>
+            <param name="left"></param>
+            <param name="centre"></param>
+            <param name="right"></param>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.DefaultCell">
+            <summary>
+            Return the default style for cells
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.Minimal">
+            <summary>
+            Return a minimal set of formatting values.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.Minimal(System.Drawing.Font)">
+            <summary>
+            Return a minimal set of formatting values.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.Box">
+            <summary>
+            Return a set of formatting values that draws boxes
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.Box(System.Drawing.Font)">
+            <summary>
+            Return a set of formatting values that draws boxes
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.Header">
+            <summary>
+            Return a format that will nicely print headers.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.Header(System.Drawing.Font)">
+            <summary>
+            Return a format that will nicely print headers.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.Footer">
+            <summary>
+            Return a format that will nicely print report footers.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.Footer(System.Drawing.Font)">
+            <summary>
+            Return a format that will nicely print report footers.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.ListHeader">
+            <summary>
+            Return a format that will nicely print list headers.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.ListHeader(System.Drawing.Font)">
+            <summary>
+            Return a format that will nicely print list headers.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.GroupHeader">
+            <summary>
+            Return a format that will nicely print group headers.
+            </summary>
+        </member>
+        <member name="M:BrightIdeasSoftware.BlockFormat.GroupHeader(System.Drawing.Font)">
+            <summary>
+            Return a format that will nicely print group headers.
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.Font">
+            <summary>
+            In what font should the text of the block be drawn? If this is null, the font from the listview will be used
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.FontOrDefault">
+            <summary>
+            Return the font that should be used for the text of this block or a reasonable default
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.TextBrushData">
+            <summary>
+            This object is used by the IDE to set the text brush.
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.TextBrushOrDefault">
+            <summary>
+            Return the brush that will be used to draw the text or a reasonable default
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.BackgroundBrushData">
+            <summary>
+            This object is used by the IDE to set the background brush.
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.CanWrap">
+            <summary>
+            When laying out our header can the text be wrapped?
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.MinimumTextHeight">
+            <summary>
+            If this is set, at least this much vertical space will be reserved for the text,
+            even if the text is smaller.
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.TopBorderPenData">
+            <summary>
+            Set the TopBorder
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.LeftBorderPenData">
+            <summary>
+            Set the LeftBorder
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.BottomBorderPenData">
+            <summary>
+            Set the BottomBorder
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.RightBorderPenData">
+            <summary>
+            Set the RightBorder
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.AllBorderPenData">
+            <summary>
+            Set the RightBorder
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.BackgroundColor">
+            <summary>
+            What color will be used to draw the background?
+            This is a convience method used by the IDE.
+            </summary>
+        </member>
+        <member name="P:BrightIdeasSoftware.BlockFormat.TextColor">
+            <summary>
+            What color will be used to draw the text?
+            This is a convience method. Programmers should call TextBrush directly.
+            </summary>
+        </member>
+    </members>
+</doc>

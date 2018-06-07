@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IDCardRead.ChinaVison.IDCardRead_CVR100U">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAYAAAAAAAAAAAAAAAAQABAAAAABAEAAAAACAACA=</HashCode>
+      <FileName>Read\ChinaVison\IDCardRead_CVR100U.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IDCardRead.Potevio.IDCradRead_Potevio">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="IDCardRead.Potevio.IDCradRead_Potevio.PERSONINFOW" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Read\Potevio\IDCradRead_Potevio.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAEAAAAABAAAgAQBAAABAAACAACA=</HashCode>
+      <FileName>Read\Potevio\IDCradRead_Potevio.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IDCardRead.Read.Routon.IDCardRead_RoutonIDR210">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAIAAYABAAAAABAAAAAAAAAACA=</HashCode>
+      <FileName>Read\Routon\IDCardRead_RoutonIDR210.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IDCardRead.Synjones.IDCardRead_Syn">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAwAABAAAgAAgAAAAAAggBQAQAMAKAAASA=</HashCode>
+      <FileName>Read\Synjones\IDCardRead_Syn.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>
