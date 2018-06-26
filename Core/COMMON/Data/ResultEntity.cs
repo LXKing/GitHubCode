@@ -7,7 +7,7 @@ namespace System.Data
 {
     public class ResultEntity<T>
     {
-        private bool _Success = true;
+        private bool _Success = false;
         /// <summary>
         /// 表示执行是否成功(默认true)
         /// </summary>

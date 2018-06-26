@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Net;
 using System.Text;
 
 namespace COMMON.Net.HttpClient
@@ -44,5 +45,11 @@ namespace COMMON.Net.HttpClient
         /// 引用页
         /// </summary>
         public string RefererUrl { get; set; }
+
+        public List<KeyValuePair<string,string>> Headers
+        {
+            get;
+            set;
+        }
     }
 }
