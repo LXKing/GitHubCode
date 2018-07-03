@@ -24,7 +24,6 @@ namespace System
         /// <returns></returns>
         public static T JsonToObject<T>(this string jsonString)
         {
-
             #region New
             //try
             //{
@@ -48,7 +47,11 @@ namespace System
             } 
             #endregion
         }
-
+        /// <summary>
+        /// 判断是否为正确的json串
+        /// </summary>
+        /// <param name="jsonString"></param>
+        /// <returns></returns>
         public static bool IsJson(this string jsonString)
         {
             var result = false;
