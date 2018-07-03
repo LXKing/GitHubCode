@@ -24,18 +24,6 @@ namespace System
         /// <returns></returns>
         public static T JsonToObject<T>(this string jsonString)
         {
-            #region New
-            //try
-            //{
-            //    return Newtonsoft.Json.JsonConvertEx.DeserializeObject<T>(jsonString);
-            //}
-            //catch (Exception ex)
-            //{
-            //    COMMON.Logs.Log.WriteException("ObjectEx.ToJsonString方法异常", ex);
-            //    throw ex;
-            //}
-            #endregion
-            #region Old
             try
             {
                 return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(jsonString);
@@ -44,8 +32,7 @@ namespace System
             {
                 COMMON.Logs.Log.WriteException("ObjectEx.ToJsonString方法异常", ex);
                 throw ex;
-            } 
-            #endregion
+            }
         }
         /// <summary>
         /// 判断是否为正确的json串
